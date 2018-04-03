@@ -1,0 +1,39 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+[Project tree]
+Core
+	+Core
+		CButton.cpp
+		CButton.cppold
+		CButton.h
+		CButton.hold
+		CLED.cpp
+		CLED.h
+		CLEDBlink.cpp
+		CLEDBlink.h
+		CObject.cpp
+		CObject.h
+		CObject.zip
+[Open project files]
+0=CObject.h
+1=CObject.cpp
+[Selected Project Files]
+Main=
+Selected=CObject.h
+[CObject.h]
+TopLine=1
+Caret=1,1
+[CObject.cpp]
+TopLine=1
+Caret=1,2

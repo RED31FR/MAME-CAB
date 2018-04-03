@@ -1,0 +1,23 @@
+#include "CButton.h"
+
+CButton::CButton(int p):CObject(p)
+{
+ 
+};
+
+void CButton::setup()
+{
+  pinMode(_pin, INPUT);
+}
+
+int CButton::getState()
+{
+  return digitalRead(_pin);
+};
+
+void CButton::update()
+{
+  //pCallbackUpdate(this);
+}
+
+
