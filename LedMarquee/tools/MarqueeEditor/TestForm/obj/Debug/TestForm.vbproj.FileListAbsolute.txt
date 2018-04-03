@@ -1,0 +1,16 @@
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\TestForm.exe.config
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\TestForm.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\TestForm.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\TestForm.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\CMarqueeObjects.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\CMarqueeObjects.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\CMarqueeObjects.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.vbprojResolveAssemblyReference.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.TestForm.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.Resources.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.vbproj.GenerateResource.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.vbproj.CoreCompileInputs.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.vbproj.CopyComplete
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.pdb

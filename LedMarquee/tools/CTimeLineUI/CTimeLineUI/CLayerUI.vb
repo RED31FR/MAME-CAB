@@ -292,6 +292,7 @@ Public Class CLayerUI
         Dim layer As CLayer
         layer = New CLayer("merge", m_Image.Image)
         m_Image.clear()
+        imageListSmall.Images.Clear()
         m_Image.add(layer)
         Me.Image = m_Image
         layerIndex = 1

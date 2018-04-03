@@ -1,7 +1,7 @@
 ﻿Imports CMarqueeObjects
 
 Public Class TestForm
-    Private Property m_Frames As CFrames
+    Private Property m_Frames As CFramesLayer
 
     Private Sub CToolsPaletteUI1_ButtonSeletionClick() Handles CToolsPaletteUI1.ButtonSeletionClick
         CPixelsPanel1.startSelection()
@@ -66,11 +66,22 @@ Public Class TestForm
 
     Private Sub CFullImage1_SelectionChanged() Handles CFullImage1.SelectionChanged
         CPixelsPanel1.SmallImage = CFullImage1.getSmallImage
-        If m_Frames IsNot Nothing Then
-            m_Frames.addFrame()
-            m_Frames.goNext()
-            m_Frames.setImage((CPixelsPanel1.SmallImage))
+        Dim index As Integer = m_Frames.Count + 1
+        Dim indexStr As String
+        If index < 10 Then
+            indexStr = "00" & index.ToString
+        ElseIf index < 100 Then
+            indexStr = "0" & index.ToString
+        Else
+            indexStr = index.ToString
         End If
+
+        Dim img As CImage = New CImage("image" & indexStr)
+        'Dim img As CImage
+        'img = New CImage("image001")
+        img.add(New CLayer("Layer 1", CPixelsPanel1.SmallImage))
+        m_Frames.add(img)
+        'End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -81,7 +92,7 @@ Public Class TestForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If CFullImage1.StartPoint.X = CFullImage1.ImageWidth - CFullImage1.SmallWidth - 1 Then
             Timer1.Stop()
-            m_Frames._folderPath = "c:\temp\test2\"
+            m_Frames.FolderPath = "c:\temp\test2\"
             m_Frames.save(300, 5, "COM1", 9600)
         Else
             CFullImage1.moveSelectionVertical(1)
@@ -95,8 +106,7 @@ Public Class TestForm
     End Sub
 
     Private Sub TestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        m_Frames = New CFrames("c:\temp\test2\", "image", "png")
-        m_Frames.setImageSize(28, 10)
+        m_Frames = New CFramesLayer("c:\temp\test2\", "image", "png")
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

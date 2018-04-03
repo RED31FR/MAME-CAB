@@ -366,6 +366,7 @@ Public Class CFramesLayer
     Public Sub save(speed As String, Brightness As Byte, portName As String, serialspeed As Integer)
         If m_folderPath <> "" Then
             'delete all folders
+            System.IO.Directory.Delete(m_folderPath, True)
             'Directory.Delete(m_folderPath, True)
             Directory.CreateDirectory(m_folderPath)
             If Not Directory.Exists(m_folderPath & "output") Then
