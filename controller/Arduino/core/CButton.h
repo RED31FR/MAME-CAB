@@ -3,8 +3,7 @@
 
 #ifndef CButton_h
 #define CButton_h
- 
-class CButton : public CObject
+ class CButton : public CObject
 {
   private:
     int lastValue;
@@ -19,5 +18,4 @@ class CButton : public CObject
     virtual void loop();
     CButton(int PIN, void (*pCallbackFunction)(CButton*));
 };
- 
-#endif
+ #endif
