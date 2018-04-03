@@ -1,0 +1,16 @@
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\NewEditor.exe.config
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\NewEditor.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\NewEditor.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\NewEditor.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\CMarqueeObjects.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\CMarqueeObjects.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\bin\Release\CMarqueeObjects.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.vbprojResolveAssemblyReference.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.Form1.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.Resources.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.vbproj.GenerateResource.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.vbproj.CoreCompileInputs.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.vbproj.CopyComplete
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\NewEditor\obj\Release\NewEditor.pdb
