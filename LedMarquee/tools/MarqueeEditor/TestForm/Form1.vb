@@ -1,4 +1,7 @@
-﻿Imports CMarqueeObjects
+﻿Imports System.IO
+Imports System.Net
+Imports System.Text
+Imports CMarqueeObjects
 
 Public Class TestForm
     Private Property m_Frames As CFramesLayer
@@ -45,11 +48,6 @@ Public Class TestForm
 
     Private Sub CToolsPaletteUI1_ButtonRotateRightClick() Handles CToolsPaletteUI1.ButtonRotateRightClick
         CPixelsPanel1.RotateRight()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'CPixelsPanel1.startFill()
-
     End Sub
 
     Private Sub CToolsPaletteUI1_ButtonFillClick() Handles CToolsPaletteUI1.ButtonFillClick
@@ -118,4 +116,5 @@ Public Class TestForm
             End If
         End If
     End Sub
+
 End Class

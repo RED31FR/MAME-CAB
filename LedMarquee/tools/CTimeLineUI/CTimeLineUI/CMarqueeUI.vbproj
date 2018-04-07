@@ -86,6 +86,12 @@
     <Compile Include="CLayerUI.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CMarqueeWebUI.Designer.vb">
+      <DependentUpon>CMarqueeWebUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMarqueeWebUI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CPixel.vb" />
     <Compile Include="CPixelPanel.Designer.vb">
       <DependentUpon>CPixelPanel.vb</DependentUpon>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CLayerUI.resx">
       <DependentUpon>CLayerUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMarqueeWebUI.resx">
+      <DependentUpon>CMarqueeWebUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPixelPanel.resx">
       <DependentUpon>CPixelPanel.vb</DependentUpon>

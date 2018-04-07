@@ -140,7 +140,4 @@ Public Class CFullImage
         End If
         Return p
     End Function
-
-
-
 End Class

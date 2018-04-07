@@ -1,0 +1,17 @@
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\MarqueeService.exe.config
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\MarqueeService.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\MarqueeService.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\MarqueeService.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\CMarqueeObjects.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\CMarqueeObjects.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\bin\Debug\CMarqueeObjects.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.vbprojResolveAssemblyReference.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.Resources.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.ProjectInstaller.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.Service1.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.vbproj.GenerateResource.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.vbproj.CoreCompileInputs.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.vbproj.CopyComplete
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeService\obj\Debug\MarqueeService.pdb

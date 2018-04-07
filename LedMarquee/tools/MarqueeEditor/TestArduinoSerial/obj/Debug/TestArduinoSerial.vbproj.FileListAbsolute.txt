@@ -1,0 +1,16 @@
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\TestArduinoSerial.exe.config
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\TestArduinoSerial.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\TestArduinoSerial.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\TestArduinoSerial.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\CMarqueeObjects.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\CMarqueeObjects.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\CMarqueeObjects.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.vbprojResolveAssemblyReference.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.Form1.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.Resources.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.vbproj.GenerateResource.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.vbproj.CoreCompileInputs.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.vbproj.CopyComplete
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.pdb

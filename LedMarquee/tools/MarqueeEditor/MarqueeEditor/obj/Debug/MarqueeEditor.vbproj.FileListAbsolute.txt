@@ -1,0 +1,17 @@
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\MarqueeEditor.exe.config
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\MarqueeEditor.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\MarqueeEditor.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\MarqueeEditor.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\CMarqueeObjects.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\CMarqueeObjects.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\CMarqueeObjects.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.vbprojResolveAssemblyReference.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.DialogSerialPort.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.Form1.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.Resources.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.vbproj.GenerateResource.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.vbproj.CoreCompileInputs.cache
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.vbproj.CopyComplete
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.exe
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.pdb
