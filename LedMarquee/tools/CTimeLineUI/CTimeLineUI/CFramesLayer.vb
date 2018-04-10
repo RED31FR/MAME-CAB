@@ -1,6 +1,10 @@
 ﻿Imports System.Drawing
 Imports System.IO
+Imports System.Net
+Imports System.Text
 Imports System.Windows.Forms
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
 
 Public Class CLayer
     Private Property m_Image As Bitmap
@@ -216,6 +220,40 @@ Public Class CImage
         Next
         Me.Image.Save(folder & "output\" & Me.Name & ".png")
     End Sub
+
+    Public Sub saveWeb(serverPath As String, cmarqueeID As Integer, index As Integer)
+        Dim web As New CWebTools
+        Dim htmlcode As String = web.PHP(serverPath & "/addcimagevb.php", "POST", "marqueeid=" & cmarqueeID & "&imagename=" & Me.Name)
+        'MsgBox(htmlcode)        
+
+        Dim jsonObj As JObject = JObject.Parse(htmlcode)
+
+        'MsgBox(jsonObj.GetValue("id").ToString & " " & jsonObj.GetValue("name").ToString)
+
+
+
+        For Each layer In Me.m_Layers
+            Dim indexLayer As Integer = m_Layers.IndexOf(layer)
+            Dim indexStr As String
+            If indexLayer < 10 Then
+                indexStr = "00" & indexLayer.ToString
+            ElseIf indexLayer < 100 Then
+                indexStr = "0" & indexLayer.ToString
+            Else
+                indexStr = indexLayer.ToString
+            End If
+            If layer.State Then
+                layer.Image.Save(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png")
+                web.UploadFile(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png", serverPath & "/addlayervb.php?cimageid=" & jsonObj.GetValue("id").ToString & "&layername=" & Me.Name)
+                File.Delete(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png")
+                'layer.Image.Save(folder & Me.Name & "\" & indexStr & "_c_" & layer.Name & ".png")
+            Else
+                'layer.Image.Save(folder & Me.Name & "\" & indexStr & "_u_" & layer.Name & ".png")
+            End If
+        Next
+        'Me.Image.Save(folder & "output\" & Me.Name & ".png")
+    End Sub
+
 End Class
 
 Public Class CFramesLayer
@@ -269,11 +307,13 @@ Public Class CFramesLayer
             End If
         End Set
     End Property
+
     Public ReadOnly Property Count As Integer
         Get
             Return m_Images.Count
         End Get
     End Property
+
 
     Public Sub clear()
         m_Images.Clear()
@@ -387,6 +427,35 @@ Public Class CFramesLayer
             sw.WriteLine("[SerialSpeed]")
             sw.WriteLine(serialspeed)
             sw.Close()
+        End If
+    End Sub
+
+    Public Sub saveWeb(serverPath As String, name As String, speed As String, Brightness As Byte, portName As String, serialspeed As Integer)
+        If serverPath <> "" Then
+            'delete all folders            
+            Dim web As New CWebTools
+            Dim htmlcode As String = web.PHP(serverPath & "/addmarqueevb.php", "POST", "marqueename=" & name)
+            'MsgBox(htmlcode)        
+
+            Dim jsonObj As JObject = JObject.Parse(htmlcode)
+
+            'MsgBox(jsonObj.GetValue("id").ToString & " " & jsonObj.GetValue("name").ToString)
+
+            For Each image In m_Images
+                image.saveWeb(serverPath, jsonObj.GetValue("id"), m_Images.IndexOf(image))
+            Next
+            'Dim sw As StreamWriter = New StreamWriter(m_folderPath & "output\config.ini")
+            'Dim index As String = "00"
+
+            'sw.WriteLine("[speed]")
+            'sw.WriteLine(speed)
+            'sw.WriteLine("[Brightness]")
+            'sw.WriteLine(Brightness)
+            'sw.WriteLine("[PortName]")
+            'sw.WriteLine(portName)
+            'sw.WriteLine("[SerialSpeed]")
+            'sw.WriteLine(serialspeed)
+            'sw.Close()
         End If
     End Sub
 

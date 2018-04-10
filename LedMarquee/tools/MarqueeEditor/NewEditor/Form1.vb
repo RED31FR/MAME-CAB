@@ -378,4 +378,18 @@ Public Class Form1
     Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub PublishToWebToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PublishToWebToolStripMenuItem.Click
+        Dim name = PromptWindows("name", "name")
+        m_Frames.saveWeb("http://127.0.0.1/edsa-ledmarquee", name, 100, 5, "com1", 100)
+    End Sub
+
+    Private Function PromptWindows(message As String, title As String, Optional defaultvalue As String = "no name")
+        Dim myValue As Object
+        ' Display message, title, and default value.
+        myValue = InputBox(message, title, defaultvalue)
+        ' If user has clicked Cancel, set myValue to defaultValue
+        If myValue Is "" Then myValue = defaultvalue
+        Return myValue
+    End Function
 End Class

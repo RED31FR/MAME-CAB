@@ -17,3 +17,6 @@ C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\obj\Debug\CMa
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\obj\Debug\CMarqueeObjects.xml
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\obj\Debug\CMarqueeObjects.pdb
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\obj\Debug\CMarqueeObjects.CMarqueeWebUI.resources
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\bin\Debug\Newtonsoft.Json.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\bin\Debug\Newtonsoft.Json.xml
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\CTimeLineUI\CTimeLineUI\obj\Debug\CMarqueeUI.vbproj.CopyComplete

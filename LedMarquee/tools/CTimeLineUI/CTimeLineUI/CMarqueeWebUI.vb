@@ -50,35 +50,7 @@ Public Class CMarqueeWebUI
         End Set
     End Property
 
-    Private Function PHP(ByVal url As String, ByVal method As String, ByVal data As String)
-        Try
-            Dim request As System.Net.WebRequest = System.Net.WebRequest.Create(url)
-            request.Method = method
-            Dim postData = data
-            Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
-            request.ContentType = "application/x-www-form-urlencoded"
-            request.ContentLength = byteArray.Length
-            Dim dataStream As Stream = request.GetRequestStream()
-            dataStream.Write(byteArray, 0, byteArray.Length)
-            dataStream.Close()
-            Dim response As WebResponse = request.GetResponse()
-            dataStream = response.GetResponseStream()
-            Dim reader As New StreamReader(dataStream)
-            Dim responseFromServer As String = reader.ReadToEnd()
-            reader.Close()
-            dataStream.Close()
-            response.Close()
-            Return (responseFromServer)
-        Catch ex As Exception
-            Dim error1 As String = ErrorToString()
-            If error1 = "Invalid URI: The format of the URI could not be determined." Then
-                MsgBox("ERROR! Must have HTTP:// before the URL.")
-            Else
-                MsgBox(error1)
-            End If
-            Return ("ERROR")
-        End Try
-    End Function
+
 
     Private Sub TreeViewMarquees_AfterSelect(sender As Object, e As Windows.Forms.TreeViewEventArgs) Handles TreeViewMarquees.AfterSelect
         Dim id As TreeNode
@@ -89,7 +61,8 @@ Public Class CMarqueeWebUI
             End If
             id = id.Nodes.Find("id", True)(0)
             'MsgBox(id.Text)
-            Dim htmlcode As String = PHP(m_WebServerPath & "/marqueevb.php?id=" & id.Text, "POST", "")
+            Dim web As New CWebTools
+            Dim htmlcode As String = web.PHP(m_WebServerPath & "/marqueevb.php?id=" & id.Text, "POST", "")
             fillTreeViewCImage(htmlcode)
             RaiseEvent MarqueeChanged()
         End If
@@ -103,7 +76,8 @@ Public Class CMarqueeWebUI
                 id = id.Parent
             End If
             id = id.Nodes.Find("id", True)(0)
-            Dim htmlcode As String = PHP(m_WebServerPath & "/cimagevb.php?id=" & id.Text, "POST", "")
+            Dim web As New CWebTools
+            Dim htmlcode As String = web.PHP(m_WebServerPath & "/cimagevb.php?id=" & id.Text, "POST", "")
             fillTreeViewLayer(htmlcode)
             RaiseEvent CImageChanged()
         End If
@@ -228,7 +202,8 @@ Public Class CMarqueeWebUI
 
     Private Sub AddCImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCImageToolStripMenuItem.Click
         Dim myValue As String = PromptWindows("Enter Marquee name", "Marquee name")
-        Dim htmlcode As String = PHP(m_WebServerPath & "/addmarqueevb.php", "POST", "marqueename=" & myValue)
+        Dim web As New CWebTools
+        Dim htmlcode As String = web.PHP(m_WebServerPath & "/addmarqueevb.php", "POST", "marqueename=" & myValue)
         'MsgBox(htmlcode)
         fillTreeViewMarquee()
     End Sub
@@ -245,7 +220,8 @@ Public Class CMarqueeWebUI
             End If
             id = id.Nodes.Find("id", True)(0)
             Dim myValue As String = PromptWindows("Enter CImage name", "CImage name")
-            Dim htmlcode As String = PHP(m_WebServerPath & "/addcimagevb.php", "POST", "marqueeid=" & id.Text & "&imagename=" & myValue)
+            Dim web As New CWebTools
+            Dim htmlcode As String = web.PHP(m_WebServerPath & "/addcimagevb.php", "POST", "marqueeid=" & id.Text & "&imagename=" & myValue)
             fillTreeViewCImage(htmlcode)
         End If
     End Sub
@@ -260,7 +236,8 @@ Public Class CMarqueeWebUI
             id = id.Nodes.Find("id", True)(0)
             Dim myValue As String = PromptWindows("Enter Layer name", "Layer name")
             My.Computer.Network.UploadFile(Path.GetTempPath & "\image001.png", m_WebServerPath & "/addlayervb.php?cimageid=" & id.Text & "&layername=" & myValue)
-            Dim htmlcode As String = PHP(m_WebServerPath & "/cimagevb.php?id=" & id.Text, "POST", "")
+            Dim web As New CWebTools
+            Dim htmlcode As String = web.PHP(m_WebServerPath & "/cimagevb.php?id=" & id.Text, "POST", "")
             fillTreeViewLayer(htmlcode)
             RaiseEvent CImageChanged()
         End If
