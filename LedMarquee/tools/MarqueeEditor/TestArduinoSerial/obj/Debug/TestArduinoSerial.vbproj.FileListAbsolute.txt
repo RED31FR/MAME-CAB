@@ -14,3 +14,5 @@ C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\D
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.exe
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.xml
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\obj\Debug\TestArduinoSerial.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\Newtonsoft.Json.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestArduinoSerial\bin\Debug\Newtonsoft.Json.xml

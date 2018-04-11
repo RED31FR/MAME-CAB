@@ -117,4 +117,7 @@ Public Class TestForm
         End If
     End Sub
 
+    Private Sub CMarqueeWebUI1_ImageClicked() Handles CMarqueeWebUI1.ImageClicked
+        CPixelsPanel1.SmallImage = CMarqueeWebUI1.Image
+    End Sub
 End Class

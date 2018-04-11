@@ -15,3 +15,5 @@ C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.exe
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.xml
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\obj\Debug\MarqueeEditor.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\Newtonsoft.Json.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\MarqueeEditor\bin\Debug\Newtonsoft.Json.xml

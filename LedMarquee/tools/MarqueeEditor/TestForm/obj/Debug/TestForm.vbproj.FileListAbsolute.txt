@@ -14,3 +14,5 @@ C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\Test
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.exe
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.xml
 C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\obj\Debug\TestForm.pdb
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\Newtonsoft.Json.dll
+C:\repo\MAME-CAB\MAME-CAB\LedMarquee\tools\MarqueeEditor\TestForm\bin\Debug\Newtonsoft.Json.xml

@@ -380,8 +380,15 @@ Public Class Form1
     End Sub
 
     Private Sub PublishToWebToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PublishToWebToolStripMenuItem.Click
-        Dim name = PromptWindows("name", "name")
-        m_Frames.saveWeb("http://127.0.0.1/edsa-ledmarquee", name, 100, 5, "com1", 100)
+        Dim name As String
+        If m_Frames.WebName = "" Then
+            Name = PromptWindows("name", "name")
+        Else
+            Name = m_Frames.WebName
+        End If
+        If name <> "" Then
+            m_Frames.saveWeb("http://127.0.0.1/edsa-ledmarquee", name, 100, 5, "com1", 100)
+        End If
     End Sub
 
     Private Function PromptWindows(message As String, title As String, Optional defaultvalue As String = "no name")
@@ -389,7 +396,7 @@ Public Class Form1
         ' Display message, title, and default value.
         myValue = InputBox(message, title, defaultvalue)
         ' If user has clicked Cancel, set myValue to defaultValue
-        If myValue Is "" Then myValue = defaultvalue
+        'If myValue Is "" Then myValue = ""
         Return myValue
     End Function
 End Class

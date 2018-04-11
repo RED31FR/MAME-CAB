@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+Imports System.Threading
 Imports System.Windows.Forms
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
@@ -224,14 +225,7 @@ Public Class CImage
     Public Sub saveWeb(serverPath As String, cmarqueeID As Integer, index As Integer)
         Dim web As New CWebTools
         Dim htmlcode As String = web.PHP(serverPath & "/addcimagevb.php", "POST", "marqueeid=" & cmarqueeID & "&imagename=" & Me.Name)
-        'MsgBox(htmlcode)        
-
         Dim jsonObj As JObject = JObject.Parse(htmlcode)
-
-        'MsgBox(jsonObj.GetValue("id").ToString & " " & jsonObj.GetValue("name").ToString)
-
-
-
         For Each layer In Me.m_Layers
             Dim indexLayer As Integer = m_Layers.IndexOf(layer)
             Dim indexStr As String
@@ -244,14 +238,14 @@ Public Class CImage
             End If
             If layer.State Then
                 layer.Image.Save(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png")
-                web.UploadFile(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png", serverPath & "/addlayervb.php?cimageid=" & jsonObj.GetValue("id").ToString & "&layername=" & Me.Name)
+                web.UploadFile(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png", serverPath & "/addlayervb.php?cimageid=" & jsonObj.GetValue("id").ToString & "&layername=" & layer.Name)
                 File.Delete(Path.GetTempPath & "\" & indexStr & "_c_" & layer.Name & ".png")
-                'layer.Image.Save(folder & Me.Name & "\" & indexStr & "_c_" & layer.Name & ".png")
             Else
-                'layer.Image.Save(folder & Me.Name & "\" & indexStr & "_u_" & layer.Name & ".png")
+                layer.Image.Save(Path.GetTempPath & "\" & indexStr & "_u_" & layer.Name & ".png")
+                web.UploadFile(Path.GetTempPath & "\" & indexStr & "_u_" & layer.Name & ".png", serverPath & "/addlayervb.php?cimageid=" & jsonObj.GetValue("id").ToString & "&layername=" & layer.Name)
+                File.Delete(Path.GetTempPath & "\" & indexStr & "_u_" & layer.Name & ".png")
             End If
         Next
-        'Me.Image.Save(folder & "output\" & Me.Name & ".png")
     End Sub
 
 End Class
@@ -262,6 +256,17 @@ Public Class CFramesLayer
     Private Property m_folderPath As String
     Private Property m_fileNameRoot As String
     Private Property m_extention As String
+    Private Property m_webID As Integer = 0
+    Private Property m_webName As String = ""
+
+    Public Property WebName As String
+        Get
+            Return m_webName
+        End Get
+        Set(value As String)
+            m_webName = value
+        End Set
+    End Property
 
     Public Property FolderPath As String
         Get
@@ -430,34 +435,30 @@ Public Class CFramesLayer
         End If
     End Sub
 
+    Private Sub saveMarquees(serverPath As String)
+        For Each image In m_Images
+            image.saveWeb(serverPath, m_webID, m_Images.IndexOf(image))
+        Next
+    End Sub
+
     Public Sub saveWeb(serverPath As String, name As String, speed As String, Brightness As Byte, portName As String, serialspeed As Integer)
         If serverPath <> "" Then
-            'delete all folders            
             Dim web As New CWebTools
-            Dim htmlcode As String = web.PHP(serverPath & "/addmarqueevb.php", "POST", "marqueename=" & name)
-            'MsgBox(htmlcode)        
-
+            Dim htmlcode As String
+            If m_webID <> 0 Then
+                htmlcode = web.PHP(serverPath & "/delmarqueevb.php", "POST", "id=" & m_webID)
+            End If
+            htmlcode = web.PHP(serverPath & "/addmarqueevb.php", "POST", "marqueename=" & name)
             Dim jsonObj As JObject = JObject.Parse(htmlcode)
-
-            'MsgBox(jsonObj.GetValue("id").ToString & " " & jsonObj.GetValue("name").ToString)
-
-            For Each image In m_Images
-                image.saveWeb(serverPath, jsonObj.GetValue("id"), m_Images.IndexOf(image))
-            Next
-            'Dim sw As StreamWriter = New StreamWriter(m_folderPath & "output\config.ini")
-            'Dim index As String = "00"
-
-            'sw.WriteLine("[speed]")
-            'sw.WriteLine(speed)
-            'sw.WriteLine("[Brightness]")
-            'sw.WriteLine(Brightness)
-            'sw.WriteLine("[PortName]")
-            'sw.WriteLine(portName)
-            'sw.WriteLine("[SerialSpeed]")
-            'sw.WriteLine(serialspeed)
-            'sw.Close()
+            m_webID = jsonObj.GetValue("id")
+            m_webName = name
+            'Dim SaveMarquee As New Thread(AddressOf saveMarquees)
+            'SaveMarquee.Start()
+            saveMarquees(serverPath)
         End If
     End Sub
+
+
 
     Public Sub open()
         For Each Dir As String In Directory.GetDirectories(m_folderPath)

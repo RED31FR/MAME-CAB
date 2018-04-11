@@ -68,6 +68,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAuthentificationUI.Designer.vb">
+      <DependentUpon>CAuthentificationUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAuthentificationUI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CFoundMarqueeID.vb" />
     <Compile Include="Cframe.vb" />
     <Compile Include="CFramesLayer.vb" />
@@ -146,6 +152,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CAuthentificationUI.resx">
+      <DependentUpon>CAuthentificationUI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CFullImage.resx">
       <DependentUpon>CFullImage.vb</DependentUpon>
     </EmbeddedResource>
