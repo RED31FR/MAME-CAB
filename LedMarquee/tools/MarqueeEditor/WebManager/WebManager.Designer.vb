@@ -48,7 +48,7 @@ Partial Class WebManager
         '
         Me.CMarqueeWebUI1.CImageId = 0
         Me.CMarqueeWebUI1.LayerId = 0
-        Me.CMarqueeWebUI1.Location = New System.Drawing.Point(12, 120)
+        Me.CMarqueeWebUI1.Location = New System.Drawing.Point(12, 54)
         Me.CMarqueeWebUI1.MarqueeId = 0
         Me.CMarqueeWebUI1.Name = "CMarqueeWebUI1"
         Me.CMarqueeWebUI1.ServerWebPath = "http://127.0.0.1/edsa-ledmarquee"
@@ -60,12 +60,12 @@ Partial Class WebManager
         '
         Me.CAuthentificationUI1.Location = New System.Drawing.Point(12, 27)
         Me.CAuthentificationUI1.Name = "CAuthentificationUI1"
-        Me.CAuthentificationUI1.PasswordFieldName = "password"
+        Me.CAuthentificationUI1.SQLPasswordFieldName = "password"
         Me.CAuthentificationUI1.ServerPath = "http://127.0.0.1/edsa-ledmarquee"
-        Me.CAuthentificationUI1.Size = New System.Drawing.Size(226, 87)
+        Me.CAuthentificationUI1.Size = New System.Drawing.Size(258, 119)
         Me.CAuthentificationUI1.TabIndex = 2
-        Me.CAuthentificationUI1.TableUSerName = "users"
-        Me.CAuthentificationUI1.UserNameFieldName = "username"
+        Me.CAuthentificationUI1.SQLTableUSerName = "users"
+        Me.CAuthentificationUI1.SQLUserNameFieldName = "username"
         '
         'WebManager
         '

@@ -277,6 +277,8 @@ Public Class CFramesLayer
         End Set
     End Property
 
+    Public Event SaveProgressChanged(value As Integer)
+
     Public Sub New()
         m_folderPath = ""
         m_fileNameRoot = "images"
@@ -436,9 +438,14 @@ Public Class CFramesLayer
     End Sub
 
     Private Sub saveMarquees(serverPath As String)
+        Dim nb As Integer = m_Images.Count
+        Dim pos As Integer = 1
         For Each image In m_Images
             image.saveWeb(serverPath, m_webID, m_Images.IndexOf(image))
+            RaiseEvent SaveProgressChanged(pos * 100 / nb)
+            pos = pos + 1
         Next
+        RaiseEvent SaveProgressChanged(0)
     End Sub
 
     Public Sub saveWeb(serverPath As String, name As String, speed As String, Brightness As Byte, portName As String, serialspeed As Integer)

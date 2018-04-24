@@ -125,6 +125,11 @@ Public Class CMarqueeWebUI
 
     Private Sub CMarqueeWebUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Reload()
+
+    End Sub
+
+    Private Sub progressChanged(value As Integer)
+        ProgressBar1.Value = value
     End Sub
 
     Private Function fillTreeViewMarquee() As String
@@ -353,17 +358,31 @@ Public Class CMarqueeWebUI
 
             m_Frames = Nothing
             m_Frames = New CFramesLayer(folderBrowserDialog1.SelectedPath & "\", "image", "png")
+            AddHandler m_Frames.SaveProgressChanged, AddressOf progressChanged
             m_Frames.WebName = Path.GetFileName(folderBrowserDialog1.SelectedPath)
             m_Frames.open()
             'm_Frames.CurrentImageIndex = CTimeLine1.getTrackBarPosition
-            Dim bw As New System.ComponentModel.BackgroundWorker
-            bw.WorkerReportsProgress = True
-            bw.WorkerSupportsCancellation = True
-            AddHandler bw.DoWork, AddressOf bw_DoWork
-            AddHandler bw.ProgressChanged, AddressOf bw_ProgressChanged
-            AddHandler bw.RunWorkerCompleted, AddressOf bw_RunWorkerCompleted
-            bw.RunWorkerAsync()
+            'Dim bw As New System.ComponentModel.BackgroundWorker
+            'bw.WorkerReportsProgress = True
+            'bw.WorkerSupportsCancellation = True
+            'AddHandler bw.DoWork, AddressOf bw_DoWork
+            'AddHandler bw.ProgressChanged, AddressOf bw_ProgressChanged
+            'AddHandler bw.RunWorkerCompleted, AddressOf bw_RunWorkerCompleted
+            'bw.RunWorkerAsync()
+            'LabelPleaseWait.Visible = True
+            setVisibility(False)
+            ProgressBar1.Value = 1
+            m_Frames.saveWeb(m_WebServerPath, m_Frames.WebName, 5, 5, "com1", 100)
+            Reload()
+            setVisibility(True)
         End If
+    End Sub
+
+    Private Sub setVisibility(v As Boolean)
+        TreeViewCImages.Visible = v
+        TreeViewLayer.Visible = v
+        TreeViewMarquees.Visible = v
+        LabelPleaseWait.Visible = Not v
     End Sub
 
     Private Sub bw_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs)

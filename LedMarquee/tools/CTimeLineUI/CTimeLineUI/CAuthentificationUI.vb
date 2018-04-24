@@ -9,6 +9,7 @@ Public Class CAuthentificationUI
     Private Property m_TableUsername As String
     Private Property m_UserNameFieldName As String
     Private Property m_PasswordFieldName As String
+    Private Property m_time As Integer
 
     Public Event OnConnect()
     Public Event OnDisconnect()
@@ -28,7 +29,7 @@ Public Class CAuthentificationUI
         End Set
     End Property
 
-    Public Property TableUSerName As String
+    Public Property SQLTableUSerName As String
         Get
             Return m_TableUsername
         End Get
@@ -37,7 +38,7 @@ Public Class CAuthentificationUI
         End Set
     End Property
 
-    Public Property UserNameFieldName As String
+    Public Property SQLUserNameFieldName As String
         Get
             Return m_UserNameFieldName
         End Get
@@ -46,7 +47,7 @@ Public Class CAuthentificationUI
         End Set
     End Property
 
-    Public Property PasswordFieldName As String
+    Public Property SQLPasswordFieldName As String
         Get
             Return m_PasswordFieldName
         End Get
@@ -65,7 +66,10 @@ Public Class CAuthentificationUI
         If m_UserIsConnect Then
             RaiseEvent OnConnect()
         Else
-            MsgBox("Username or Password Incorrect")
+            'MsgBox("Username or Password Incorrect")
+            Me.m_time = 2
+            Timer1.Start()
+            LabelMsg.Visible = True
             RaiseEvent OnDisconnect()
         End If
         SetState()
@@ -125,5 +129,13 @@ Public Class CAuthentificationUI
         m_UserIsConnect = False
         SetState()
         RaiseEvent OnDisconnect()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        m_time -= 1
+        If m_time = 0 Then
+            LabelMsg.Visible = False
+            Timer1.Stop()
+        End If
     End Sub
 End Class

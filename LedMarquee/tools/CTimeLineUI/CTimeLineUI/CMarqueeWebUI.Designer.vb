@@ -39,6 +39,7 @@ Partial Class CMarqueeWebUI
         Me.ImportMarqueeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.ButtonReload = New System.Windows.Forms.Button()
+        Me.LabelPleaseWait = New System.Windows.Forms.Label()
         Me.ContextMenuStripMarquee.SuspendLayout()
         Me.ContextMenuStripCImage.SuspendLayout()
         Me.ContextMenuStripLayer.SuspendLayout()
@@ -153,10 +154,22 @@ Partial Class CMarqueeWebUI
         Me.ButtonReload.Text = "Reload"
         Me.ButtonReload.UseVisualStyleBackColor = True
         '
+        'LabelPleaseWait
+        '
+        Me.LabelPleaseWait.AutoSize = True
+        Me.LabelPleaseWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPleaseWait.Location = New System.Drawing.Point(122, 124)
+        Me.LabelPleaseWait.Name = "LabelPleaseWait"
+        Me.LabelPleaseWait.Size = New System.Drawing.Size(561, 39)
+        Me.LabelPleaseWait.TabIndex = 5
+        Me.LabelPleaseWait.Text = "Operation in progress! Please WAIT"
+        Me.LabelPleaseWait.Visible = False
+        '
         'CMarqueeWebUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.LabelPleaseWait)
         Me.Controls.Add(Me.ButtonReload)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PictureBoxWeb)
@@ -170,6 +183,7 @@ Partial Class CMarqueeWebUI
         Me.ContextMenuStripLayer.ResumeLayout(False)
         CType(Me.PictureBoxWeb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -189,4 +203,5 @@ Partial Class CMarqueeWebUI
     Friend WithEvents ImportMarqueeToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProgressBar1 As Windows.Forms.ProgressBar
     Friend WithEvents ButtonReload As Windows.Forms.Button
+    Friend WithEvents LabelPleaseWait As Windows.Forms.Label
 End Class
